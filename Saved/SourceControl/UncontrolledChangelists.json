@@ -4,7 +4,19 @@
 		{
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
-			"files": []
+			"files": [
+				"D:/Unreal Projects/Warrior/Content/PlayerCharacter/BP_HeroCharacter.uasset",
+				"D:/Unreal Projects/Warrior/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset",
+				"D:/Unreal Projects/Warrior/Content/PlayerCharacter/Input/IMC_Default.uasset",
+				"D:/Unreal Projects/Warrior/Content/PlayerCharacter/Input/Actions/IA_Move.uasset",
+				"D:/Unreal Projects/Warrior/Content/PlayerCharacter/Input/Actions/IA_Look.uasset",
+				"D:/Unreal Projects/Warrior/Content/PlayerCharacter/Input/Actions/IA_Jump.uasset",
+				"D:/Unreal Projects/Warrior/Content/ThirdPerson/Input/Actions/IA_Jump.uasset",
+				"D:/Unreal Projects/Warrior/Content/ThirdPerson/Input/Actions/IA_Look.uasset",
+				"D:/Unreal Projects/Warrior/Content/ThirdPerson/Input/Actions/IA_Move.uasset",
+				"D:/Unreal Projects/Warrior/Content/ThirdPerson/Input/IMC_Default.uasset",
+				"D:/Unreal Projects/Warrior/Content/PlayerCharacter/DA_InputConfig.uasset"
+			]
 		}
 	]
 }
