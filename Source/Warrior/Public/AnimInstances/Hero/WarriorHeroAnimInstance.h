@@ -5,10 +5,10 @@
 #include "CoreMinimal.h"
 #include "AnimInstances/WarriorCharacterAnimInstance.h"
 #include "WarriorHeroAnimInstance.generated.h"
-class AWarriorHeroCharacter;
 
+class AWarriorHeroCharacter;
 /**
- * 
+ *
  */
 UCLASS()
 class WARRIOR_API UWarriorHeroAnimInstance : public UWarriorCharacterAnimInstance
@@ -26,5 +26,4 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "AnimData|LocomotionData")
 	float EnterRelaxtStateThreshold = 5.f;
 	float IdleElpasedTime;
-	
 };
