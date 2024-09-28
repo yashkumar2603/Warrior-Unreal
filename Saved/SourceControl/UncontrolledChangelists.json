@@ -11,11 +11,13 @@
 				"D:/Unreal Projects/Warrior/Content/PlayerCharacter/Input/Actions/IA_Move.uasset",
 				"D:/Unreal Projects/Warrior/Content/PlayerCharacter/Input/Actions/IA_Look.uasset",
 				"D:/Unreal Projects/Warrior/Content/PlayerCharacter/Input/Actions/IA_Jump.uasset",
+				"D:/Unreal Projects/Warrior/Content/PlayerCharacter/DA_InputConfig.uasset",
+				"D:/Unreal Projects/Warrior/Content/PlayerCharacter/AnimBP/ABP_Hero.uasset",
+				"D:/Unreal Projects/Warrior/Content/PlayerCharacter/AnimBP/BlendSpace/BS_UnarmedLocomotion.uasset",
 				"D:/Unreal Projects/Warrior/Content/ThirdPerson/Input/Actions/IA_Jump.uasset",
 				"D:/Unreal Projects/Warrior/Content/ThirdPerson/Input/Actions/IA_Look.uasset",
 				"D:/Unreal Projects/Warrior/Content/ThirdPerson/Input/Actions/IA_Move.uasset",
-				"D:/Unreal Projects/Warrior/Content/ThirdPerson/Input/IMC_Default.uasset",
-				"D:/Unreal Projects/Warrior/Content/PlayerCharacter/DA_InputConfig.uasset"
+				"D:/Unreal Projects/Warrior/Content/ThirdPerson/Input/IMC_Default.uasset"
 			]
 		}
 	]
