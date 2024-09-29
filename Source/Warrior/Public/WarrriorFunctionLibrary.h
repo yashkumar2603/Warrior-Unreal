@@ -3,7 +3,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "WarriorFunctionLibrary.generated.h"
+#include "WarrriorFunctionLibrary.generated.h"
 class UWarriorAbilitySystemComponent;
 UENUM()
 enum class EWarriorConfirmType : uint8
