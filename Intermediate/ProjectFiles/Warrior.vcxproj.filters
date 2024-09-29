@@ -67,6 +67,9 @@
     <ClCompile Include="..\..\Source\Warrior\Private\WarriorGameplayTags.cpp">
       <Filter>Source\Warrior\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\WarrriorFunctionLibrary.cpp">
+      <Filter>Source\Warrior\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\Warrior\Private\AbilitySystem">
       <UniqueIdentifier>{8B91AC25-1BA8-37C9-BF60-A65BA459D3D2}</UniqueIdentifier>
     </Filter>
@@ -185,6 +188,9 @@
       <UniqueIdentifier>{BCFCC6DC-7E76-37B0-98D2-C6FE729328D4}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\Warrior\Public\WarriorGameplayTags.h">
+      <Filter>Source\Warrior\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\WarrriorFunctionLibrary.h">
       <Filter>Source\Warrior\Public</Filter>
     </ClInclude>
     <Filter Include="Source\Warrior\Public\AbilitySystem">
