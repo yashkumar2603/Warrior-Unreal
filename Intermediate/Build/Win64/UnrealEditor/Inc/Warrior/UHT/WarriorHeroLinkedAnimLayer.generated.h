@@ -9,10 +9,15 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UWarriorHeroAnimInstance;
 #ifdef WARRIOR_WarriorHeroLinkedAnimLayer_generated_h
 #error "WarriorHeroLinkedAnimLayer.generated.h already included, missing '#pragma once' in WarriorHeroLinkedAnimLayer.h"
 #endif
 #define WARRIOR_WarriorHeroLinkedAnimLayer_generated_h
+
+#define FID_Unreal_Projects_Warrior_Source_Warrior_Public_AnimInstances_Hero_WarriorHeroLinkedAnimLayer_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetHeroAnimInstance);
+
 
 #define FID_Unreal_Projects_Warrior_Source_Warrior_Public_AnimInstances_Hero_WarriorHeroLinkedAnimLayer_h_15_INCLASS_NO_PURE_DECLS \
 private: \
@@ -41,6 +46,7 @@ public: \
 #define FID_Unreal_Projects_Warrior_Source_Warrior_Public_AnimInstances_Hero_WarriorHeroLinkedAnimLayer_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Unreal_Projects_Warrior_Source_Warrior_Public_AnimInstances_Hero_WarriorHeroLinkedAnimLayer_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Unreal_Projects_Warrior_Source_Warrior_Public_AnimInstances_Hero_WarriorHeroLinkedAnimLayer_h_15_INCLASS_NO_PURE_DECLS \
 	FID_Unreal_Projects_Warrior_Source_Warrior_Public_AnimInstances_Hero_WarriorHeroLinkedAnimLayer_h_15_ENHANCED_CONSTRUCTORS \
 private: \
