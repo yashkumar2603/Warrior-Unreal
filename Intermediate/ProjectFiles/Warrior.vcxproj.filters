@@ -82,6 +82,9 @@
     <ClCompile Include="..\..\Source\Warrior\Private\AbilitySystem\Abilities\WarriorGameplayAbility.cpp">
       <Filter>Source\Warrior\Private\AbilitySystem\Abilities</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\AbilitySystem\Abilities\WarriorHeroGameplayAbility.cpp">
+      <Filter>Source\Warrior\Private\AbilitySystem\Abilities</Filter>
+    </ClCompile>
     <Filter Include="Source\Warrior\Private\AnimInstances">
       <UniqueIdentifier>{9B98FFC4-A24E-3C78-A4AB-038FDD7FFD34}</UniqueIdentifier>
     </Filter>
@@ -112,6 +115,18 @@
     <Filter Include="Source\Warrior\Private\Components">
       <UniqueIdentifier>{7860EA81-1BA3-3C15-BA53-63E72BD87C24}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Private\Components\PawnExtensionComponentBase.cpp">
+      <Filter>Source\Warrior\Private\Components</Filter>
+    </ClCompile>
+    <Filter Include="Source\Warrior\Private\Components\Combat">
+      <UniqueIdentifier>{DE6E12D7-65DF-33BB-BEE2-F70F533D028C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Private\Components\Combat\HeroCombatComponent.cpp">
+      <Filter>Source\Warrior\Private\Components\Combat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\Components\Combat\PawnCombatComponent.cpp">
+      <Filter>Source\Warrior\Private\Components\Combat</Filter>
+    </ClCompile>
     <Filter Include="Source\Warrior\Private\Components\Input">
       <UniqueIdentifier>{57B33CC5-BCF3-3A6F-9DEB-53C082975241}</UniqueIdentifier>
     </Filter>
@@ -181,6 +196,9 @@
     <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\Abilities\WarriorGameplayAbility.h">
       <Filter>Source\Warrior\Public\AbilitySystem\Abilities</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\Abilities\WarriorHeroGameplayAbility.h">
+      <Filter>Source\Warrior\Public\AbilitySystem\Abilities</Filter>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\AnimInstances">
       <UniqueIdentifier>{1E769DC4-FF09-3BE9-AF67-CCCBBC5FF713}</UniqueIdentifier>
     </Filter>
@@ -211,6 +229,18 @@
     <Filter Include="Source\Warrior\Public\Components">
       <UniqueIdentifier>{F7335DF7-0CC5-3298-8D2F-6B78AE00574F}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Warrior\Public\Components\PawnExtensionComponentBase.h">
+      <Filter>Source\Warrior\Public\Components</Filter>
+    </ClInclude>
+    <Filter Include="Source\Warrior\Public\Components\Combat">
+      <UniqueIdentifier>{DCACA185-D3CF-3A2F-92A0-5BB825872675}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Warrior\Public\Components\Combat\HeroCombatComponent.h">
+      <Filter>Source\Warrior\Public\Components\Combat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\Components\Combat\PawnCombatComponent.h">
+      <Filter>Source\Warrior\Public\Components\Combat</Filter>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\Components\Input">
       <UniqueIdentifier>{2CBE6315-4205-38FD-BD0D-18D1CD4A2255}</UniqueIdentifier>
     </Filter>

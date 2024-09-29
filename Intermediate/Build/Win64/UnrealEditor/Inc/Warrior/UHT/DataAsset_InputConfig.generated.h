@@ -21,7 +21,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> WARRIOR_API UScriptStruct* StaticStruct<struct FWarriorInputActionConfig>();
 
-#define FID_Unreal_Projects_Warrior_Source_Warrior_Public_DataAssets_Input_DataAsset_InputConfig_h_26_INCLASS_NO_PURE_DECLS \
+#define FID_Unreal_Projects_Warrior_Source_Warrior_Public_DataAssets_Input_DataAsset_InputConfig_h_31_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUDataAsset_InputConfig(); \
 	friend struct Z_Construct_UClass_UDataAsset_InputConfig_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(UDataAsset_InputConfig)
 
 
-#define FID_Unreal_Projects_Warrior_Source_Warrior_Public_DataAssets_Input_DataAsset_InputConfig_h_26_ENHANCED_CONSTRUCTORS \
+#define FID_Unreal_Projects_Warrior_Source_Warrior_Public_DataAssets_Input_DataAsset_InputConfig_h_31_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UDataAsset_InputConfig(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -44,12 +44,12 @@ public: \
 	NO_API virtual ~UDataAsset_InputConfig();
 
 
-#define FID_Unreal_Projects_Warrior_Source_Warrior_Public_DataAssets_Input_DataAsset_InputConfig_h_23_PROLOG
-#define FID_Unreal_Projects_Warrior_Source_Warrior_Public_DataAssets_Input_DataAsset_InputConfig_h_26_GENERATED_BODY \
+#define FID_Unreal_Projects_Warrior_Source_Warrior_Public_DataAssets_Input_DataAsset_InputConfig_h_28_PROLOG
+#define FID_Unreal_Projects_Warrior_Source_Warrior_Public_DataAssets_Input_DataAsset_InputConfig_h_31_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Unreal_Projects_Warrior_Source_Warrior_Public_DataAssets_Input_DataAsset_InputConfig_h_26_INCLASS_NO_PURE_DECLS \
-	FID_Unreal_Projects_Warrior_Source_Warrior_Public_DataAssets_Input_DataAsset_InputConfig_h_26_ENHANCED_CONSTRUCTORS \
+	FID_Unreal_Projects_Warrior_Source_Warrior_Public_DataAssets_Input_DataAsset_InputConfig_h_31_INCLASS_NO_PURE_DECLS \
+	FID_Unreal_Projects_Warrior_Source_Warrior_Public_DataAssets_Input_DataAsset_InputConfig_h_31_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
