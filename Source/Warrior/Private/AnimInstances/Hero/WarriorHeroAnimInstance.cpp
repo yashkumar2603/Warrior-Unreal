@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
-#include "Characters/WarriorHeroCharacter.h"
+#include "AnimInstances/Hero/WarriorHeroAnimInstance.h"
+#include "Characters/WarriorHeroCharacater.h"
 
 void UWarriorHeroAnimInstance::NativeInitializeAnimation()
 {
