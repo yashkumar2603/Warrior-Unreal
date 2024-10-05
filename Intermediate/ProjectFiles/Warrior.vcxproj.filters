@@ -28,6 +28,9 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultGameplayTags.ini">
+      <Filter>Config</Filter>
+    </None>
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
@@ -148,6 +151,18 @@
     <ClCompile Include="..\..\Source\Warrior\Private\Components\Input\WarriorInputComponent.cpp">
       <Filter>Source\Warrior\Private\Components\Input</Filter>
     </ClCompile>
+    <Filter Include="Source\Warrior\Private\Components\UI">
+      <UniqueIdentifier>{952CF88F-87A2-3289-9F4E-29694B749485}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Private\Components\UI\EnemyUIComponent.cpp">
+      <Filter>Source\Warrior\Private\Components\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\Components\UI\HeroUIComponent.cpp">
+      <Filter>Source\Warrior\Private\Components\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\Components\UI\PawnUIComponent.cpp">
+      <Filter>Source\Warrior\Private\Components\UI</Filter>
+    </ClCompile>
     <Filter Include="Source\Warrior\Private\Controllers">
       <UniqueIdentifier>{427A409D-DA7D-36A6-A7B9-EC8DDDA6ED55}</UniqueIdentifier>
     </Filter>
@@ -187,6 +202,9 @@
     <ClCompile Include="..\..\Source\Warrior\Private\Interfaces\PawnCombatInterface.cpp">
       <Filter>Source\Warrior\Private\Interfaces</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\Interfaces\PawnUIInterface.cpp">
+      <Filter>Source\Warrior\Private\Interfaces</Filter>
+    </ClCompile>
     <Filter Include="Source\Warrior\Private\Items">
       <UniqueIdentifier>{7E912935-5489-38C9-8827-162368068E94}</UniqueIdentifier>
     </Filter>
@@ -204,6 +222,12 @@
     </Filter>
     <ClCompile Include="..\..\Source\Warrior\Private\WarriorTypes\WarriorStructTypes.cpp">
       <Filter>Source\Warrior\Private\WarriorTypes</Filter>
+    </ClCompile>
+    <Filter Include="Source\Warrior\Private\Widgets">
+      <UniqueIdentifier>{B0031074-0874-3991-AD35-CF5FEEBDBC11}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Private\Widgets\WarriorWidgetBase.cpp">
+      <Filter>Source\Warrior\Private\Widgets</Filter>
     </ClCompile>
     <Filter Include="Source\Warrior\Public">
       <UniqueIdentifier>{BCFCC6DC-7E76-37B0-98D2-C6FE729328D4}</UniqueIdentifier>
@@ -292,6 +316,18 @@
     <ClInclude Include="..\..\Source\Warrior\Public\Components\Input\WarriorInputComponent.h">
       <Filter>Source\Warrior\Public\Components\Input</Filter>
     </ClInclude>
+    <Filter Include="Source\Warrior\Public\Components\UI">
+      <UniqueIdentifier>{36D6CE62-8FE2-36D4-9A34-A4ADC10CE9C8}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Warrior\Public\Components\UI\EnemyUIComponent.h">
+      <Filter>Source\Warrior\Public\Components\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\Components\UI\HeroUIComponent.h">
+      <Filter>Source\Warrior\Public\Components\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\Components\UI\PawnUIComponent.h">
+      <Filter>Source\Warrior\Public\Components\UI</Filter>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\Controllers">
       <UniqueIdentifier>{465C914F-3C14-35C1-91F2-13B6441A3F6A}</UniqueIdentifier>
     </Filter>
@@ -331,6 +367,9 @@
     <ClInclude Include="..\..\Source\Warrior\Public\Interfaces\PawnCombatInterface.h">
       <Filter>Source\Warrior\Public\Interfaces</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\Interfaces\PawnUIInterface.h">
+      <Filter>Source\Warrior\Public\Interfaces</Filter>
+    </ClInclude>
     <Filter Include="Source\Warrior\Public\Items">
       <UniqueIdentifier>{6DD88F64-AD61-3FD2-A571-CBD6D8CCD7C8}</UniqueIdentifier>
     </Filter>
@@ -351,6 +390,12 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\Warrior\Public\WarriorTypes\WarriorStructTypes.h">
       <Filter>Source\Warrior\Public\WarriorTypes</Filter>
+    </ClInclude>
+    <Filter Include="Source\Warrior\Public\Widgets">
+      <UniqueIdentifier>{F590F50B-C821-3919-85DA-044DB0E5C48E}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Warrior\Public\Widgets\WarriorWidgetBase.h">
+      <Filter>Source\Warrior\Public\Widgets</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
