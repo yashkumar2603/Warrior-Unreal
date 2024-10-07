@@ -136,10 +136,10 @@ AWarriorHeroCharacter::~AWarriorHeroCharacter() {}
 struct Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_Characters_WarriorHeroCharacater_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AWarriorHeroCharacter, AWarriorHeroCharacter::StaticClass, TEXT("AWarriorHeroCharacter"), &Z_Registration_Info_UClass_AWarriorHeroCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWarriorHeroCharacter), 353184371U) },
+		{ Z_Construct_UClass_AWarriorHeroCharacter, AWarriorHeroCharacter::StaticClass, TEXT("AWarriorHeroCharacter"), &Z_Registration_Info_UClass_AWarriorHeroCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWarriorHeroCharacter), 2955280768U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_Characters_WarriorHeroCharacater_h_2209661140(TEXT("/Script/Warrior"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_Characters_WarriorHeroCharacater_h_664258164(TEXT("/Script/Warrior"),
 	Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_Characters_WarriorHeroCharacater_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_Characters_WarriorHeroCharacater_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
