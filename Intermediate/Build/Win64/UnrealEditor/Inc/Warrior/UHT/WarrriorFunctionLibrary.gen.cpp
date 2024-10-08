@@ -6,6 +6,7 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "Warrior/Public/WarrriorFunctionLibrary.h"
+#include "GameplayAbilities/Public/ScalableFloat.h"
 #include "Runtime/GameplayTags/Classes/GameplayTagContainer.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeWarrriorFunctionLibrary() {}
@@ -14,6 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeWarrriorFunctionLibrary() {}
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UBlueprintFunctionLibrary();
+GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FScalableFloat();
 GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
 UPackage* Z_Construct_UPackage__Script_Warrior();
 WARRIOR_API UClass* Z_Construct_UClass_UPawnCombatComponent_NoRegister();
@@ -189,6 +191,120 @@ DEFINE_FUNCTION(UWarrriorFunctionLibrary::execBP_GetPawnCombatComponentFromActor
 }
 // End Class UWarrriorFunctionLibrary Function BP_GetPawnCombatComponentFromActor
 
+// Begin Class UWarrriorFunctionLibrary Function ComputeHitReactDirectionTag
+struct Z_Construct_UFunction_UWarrriorFunctionLibrary_ComputeHitReactDirectionTag_Statics
+{
+	struct WarrriorFunctionLibrary_eventComputeHitReactDirectionTag_Parms
+	{
+		AActor* InAttacker;
+		AActor* InVictim;
+		float OutAngleDifference;
+		FGameplayTag ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Warrior|FunctionLibrary" },
+		{ "ModuleRelativePath", "Public/WarrriorFunctionLibrary.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_InAttacker;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_InVictim;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_OutAngleDifference;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UWarrriorFunctionLibrary_ComputeHitReactDirectionTag_Statics::NewProp_InAttacker = { "InAttacker", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarrriorFunctionLibrary_eventComputeHitReactDirectionTag_Parms, InAttacker), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UWarrriorFunctionLibrary_ComputeHitReactDirectionTag_Statics::NewProp_InVictim = { "InVictim", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarrriorFunctionLibrary_eventComputeHitReactDirectionTag_Parms, InVictim), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UWarrriorFunctionLibrary_ComputeHitReactDirectionTag_Statics::NewProp_OutAngleDifference = { "OutAngleDifference", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarrriorFunctionLibrary_eventComputeHitReactDirectionTag_Parms, OutAngleDifference), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UWarrriorFunctionLibrary_ComputeHitReactDirectionTag_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarrriorFunctionLibrary_eventComputeHitReactDirectionTag_Parms, ReturnValue), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(0, nullptr) }; // 1298103297
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWarrriorFunctionLibrary_ComputeHitReactDirectionTag_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarrriorFunctionLibrary_ComputeHitReactDirectionTag_Statics::NewProp_InAttacker,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarrriorFunctionLibrary_ComputeHitReactDirectionTag_Statics::NewProp_InVictim,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarrriorFunctionLibrary_ComputeHitReactDirectionTag_Statics::NewProp_OutAngleDifference,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarrriorFunctionLibrary_ComputeHitReactDirectionTag_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarrriorFunctionLibrary_ComputeHitReactDirectionTag_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarrriorFunctionLibrary_ComputeHitReactDirectionTag_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWarrriorFunctionLibrary, nullptr, "ComputeHitReactDirectionTag", nullptr, nullptr, Z_Construct_UFunction_UWarrriorFunctionLibrary_ComputeHitReactDirectionTag_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarrriorFunctionLibrary_ComputeHitReactDirectionTag_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarrriorFunctionLibrary_ComputeHitReactDirectionTag_Statics::WarrriorFunctionLibrary_eventComputeHitReactDirectionTag_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarrriorFunctionLibrary_ComputeHitReactDirectionTag_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarrriorFunctionLibrary_ComputeHitReactDirectionTag_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UWarrriorFunctionLibrary_ComputeHitReactDirectionTag_Statics::WarrriorFunctionLibrary_eventComputeHitReactDirectionTag_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UWarrriorFunctionLibrary_ComputeHitReactDirectionTag()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UWarrriorFunctionLibrary_ComputeHitReactDirectionTag_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UWarrriorFunctionLibrary::execComputeHitReactDirectionTag)
+{
+	P_GET_OBJECT(AActor,Z_Param_InAttacker);
+	P_GET_OBJECT(AActor,Z_Param_InVictim);
+	P_GET_PROPERTY_REF(FFloatProperty,Z_Param_Out_OutAngleDifference);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FGameplayTag*)Z_Param__Result=UWarrriorFunctionLibrary::ComputeHitReactDirectionTag(Z_Param_InAttacker,Z_Param_InVictim,Z_Param_Out_OutAngleDifference);
+	P_NATIVE_END;
+}
+// End Class UWarrriorFunctionLibrary Function ComputeHitReactDirectionTag
+
+// Begin Class UWarrriorFunctionLibrary Function GetScalableFloatValueAtLevel
+struct Z_Construct_UFunction_UWarrriorFunctionLibrary_GetScalableFloatValueAtLevel_Statics
+{
+	struct WarrriorFunctionLibrary_eventGetScalableFloatValueAtLevel_Parms
+	{
+		FScalableFloat InScalableFloat;
+		float InLevel;
+		float ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Warrior|FunctionLibrary" },
+		{ "CompactNodeTitle", "Get Value At Level" },
+		{ "CPP_Default_InLevel", "1.000000" },
+		{ "ModuleRelativePath", "Public/WarrriorFunctionLibrary.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InScalableFloat_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_InScalableFloat;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_InLevel;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UWarrriorFunctionLibrary_GetScalableFloatValueAtLevel_Statics::NewProp_InScalableFloat = { "InScalableFloat", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarrriorFunctionLibrary_eventGetScalableFloatValueAtLevel_Parms, InScalableFloat), Z_Construct_UScriptStruct_FScalableFloat, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InScalableFloat_MetaData), NewProp_InScalableFloat_MetaData) }; // 703790095
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UWarrriorFunctionLibrary_GetScalableFloatValueAtLevel_Statics::NewProp_InLevel = { "InLevel", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarrriorFunctionLibrary_eventGetScalableFloatValueAtLevel_Parms, InLevel), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UWarrriorFunctionLibrary_GetScalableFloatValueAtLevel_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarrriorFunctionLibrary_eventGetScalableFloatValueAtLevel_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWarrriorFunctionLibrary_GetScalableFloatValueAtLevel_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarrriorFunctionLibrary_GetScalableFloatValueAtLevel_Statics::NewProp_InScalableFloat,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarrriorFunctionLibrary_GetScalableFloatValueAtLevel_Statics::NewProp_InLevel,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarrriorFunctionLibrary_GetScalableFloatValueAtLevel_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarrriorFunctionLibrary_GetScalableFloatValueAtLevel_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarrriorFunctionLibrary_GetScalableFloatValueAtLevel_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWarrriorFunctionLibrary, nullptr, "GetScalableFloatValueAtLevel", nullptr, nullptr, Z_Construct_UFunction_UWarrriorFunctionLibrary_GetScalableFloatValueAtLevel_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarrriorFunctionLibrary_GetScalableFloatValueAtLevel_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarrriorFunctionLibrary_GetScalableFloatValueAtLevel_Statics::WarrriorFunctionLibrary_eventGetScalableFloatValueAtLevel_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarrriorFunctionLibrary_GetScalableFloatValueAtLevel_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarrriorFunctionLibrary_GetScalableFloatValueAtLevel_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UWarrriorFunctionLibrary_GetScalableFloatValueAtLevel_Statics::WarrriorFunctionLibrary_eventGetScalableFloatValueAtLevel_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UWarrriorFunctionLibrary_GetScalableFloatValueAtLevel()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UWarrriorFunctionLibrary_GetScalableFloatValueAtLevel_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UWarrriorFunctionLibrary::execGetScalableFloatValueAtLevel)
+{
+	P_GET_STRUCT_REF(FScalableFloat,Z_Param_Out_InScalableFloat);
+	P_GET_PROPERTY(FFloatProperty,Z_Param_InLevel);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=UWarrriorFunctionLibrary::GetScalableFloatValueAtLevel(Z_Param_Out_InScalableFloat,Z_Param_InLevel);
+	P_NATIVE_END;
+}
+// End Class UWarrriorFunctionLibrary Function GetScalableFloatValueAtLevel
+
 // Begin Class UWarrriorFunctionLibrary Function IsTargetPawnHostile
 struct Z_Construct_UFunction_UWarrriorFunctionLibrary_IsTargetPawnHostile_Statics
 {
@@ -302,6 +418,8 @@ void UWarrriorFunctionLibrary::StaticRegisterNativesUWarrriorFunctionLibrary()
 		{ "AddGameplayTagToActorIfNone", &UWarrriorFunctionLibrary::execAddGameplayTagToActorIfNone },
 		{ "BP_DoesActorHaveTag", &UWarrriorFunctionLibrary::execBP_DoesActorHaveTag },
 		{ "BP_GetPawnCombatComponentFromActor", &UWarrriorFunctionLibrary::execBP_GetPawnCombatComponentFromActor },
+		{ "ComputeHitReactDirectionTag", &UWarrriorFunctionLibrary::execComputeHitReactDirectionTag },
+		{ "GetScalableFloatValueAtLevel", &UWarrriorFunctionLibrary::execGetScalableFloatValueAtLevel },
 		{ "IsTargetPawnHostile", &UWarrriorFunctionLibrary::execIsTargetPawnHostile },
 		{ "RemoveGameplayFromActorIfFound", &UWarrriorFunctionLibrary::execRemoveGameplayFromActorIfFound },
 	};
@@ -328,6 +446,8 @@ struct Z_Construct_UClass_UWarrriorFunctionLibrary_Statics
 		{ &Z_Construct_UFunction_UWarrriorFunctionLibrary_AddGameplayTagToActorIfNone, "AddGameplayTagToActorIfNone" }, // 486914078
 		{ &Z_Construct_UFunction_UWarrriorFunctionLibrary_BP_DoesActorHaveTag, "BP_DoesActorHaveTag" }, // 929946796
 		{ &Z_Construct_UFunction_UWarrriorFunctionLibrary_BP_GetPawnCombatComponentFromActor, "BP_GetPawnCombatComponentFromActor" }, // 2300170904
+		{ &Z_Construct_UFunction_UWarrriorFunctionLibrary_ComputeHitReactDirectionTag, "ComputeHitReactDirectionTag" }, // 2483974346
+		{ &Z_Construct_UFunction_UWarrriorFunctionLibrary_GetScalableFloatValueAtLevel, "GetScalableFloatValueAtLevel" }, // 598474311
 		{ &Z_Construct_UFunction_UWarrriorFunctionLibrary_IsTargetPawnHostile, "IsTargetPawnHostile" }, // 1136538345
 		{ &Z_Construct_UFunction_UWarrriorFunctionLibrary_RemoveGameplayFromActorIfFound, "RemoveGameplayFromActorIfFound" }, // 1766364428
 	};
@@ -378,10 +498,10 @@ UWarrriorFunctionLibrary::~UWarrriorFunctionLibrary() {}
 struct Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_WarrriorFunctionLibrary_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWarrriorFunctionLibrary, UWarrriorFunctionLibrary::StaticClass, TEXT("UWarrriorFunctionLibrary"), &Z_Registration_Info_UClass_UWarrriorFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarrriorFunctionLibrary), 2139866897U) },
+		{ Z_Construct_UClass_UWarrriorFunctionLibrary, UWarrriorFunctionLibrary::StaticClass, TEXT("UWarrriorFunctionLibrary"), &Z_Registration_Info_UClass_UWarrriorFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarrriorFunctionLibrary), 3227486660U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_WarrriorFunctionLibrary_h_866982158(TEXT("/Script/Warrior"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_WarrriorFunctionLibrary_h_1845798162(TEXT("/Script/Warrior"),
 	Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_WarrriorFunctionLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_WarrriorFunctionLibrary_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
