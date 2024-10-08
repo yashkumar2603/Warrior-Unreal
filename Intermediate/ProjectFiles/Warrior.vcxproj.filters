@@ -88,6 +88,9 @@
     <Filter Include="Source\Warrior\Private\AbilitySystem\Abilities">
       <UniqueIdentifier>{F1AAEC36-8D99-3B4E-9B75-F663FA310F2B}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Private\AbilitySystem\Abilities\HeroGameplayAbility_TargetLock.cpp">
+      <Filter>Source\Warrior\Private\AbilitySystem\Abilities</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Warrior\Private\AbilitySystem\Abilities\WarriorEnemyGameplayAbility.cpp">
       <Filter>Source\Warrior\Private\AbilitySystem\Abilities</Filter>
     </ClCompile>
@@ -96,6 +99,15 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\Warrior\Private\AbilitySystem\Abilities\WarriorHeroGameplayAbility.cpp">
       <Filter>Source\Warrior\Private\AbilitySystem\Abilities</Filter>
+    </ClCompile>
+    <Filter Include="Source\Warrior\Private\AbilitySystem\AbilityTask">
+      <UniqueIdentifier>{707EA36C-7F42-32B6-9717-13D8E149B22A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Private\AbilitySystem\AbilityTask\AbilityTask_ExecuteTaskOnTick.cpp">
+      <Filter>Source\Warrior\Private\AbilitySystem\AbilityTask</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\AbilitySystem\AbilityTask\AbilityTask_ExecuteTaskOnTrick.cpp">
+      <Filter>Source\Warrior\Private\AbilitySystem\AbilityTask</Filter>
     </ClCompile>
     <Filter Include="Source\Warrior\Private\AI">
       <UniqueIdentifier>{D76A10E6-74DA-3B17-B93F-B03971A2ADC2}</UniqueIdentifier>
@@ -265,6 +277,9 @@
     <Filter Include="Source\Warrior\Public\AbilitySystem\Abilities">
       <UniqueIdentifier>{139FEC8F-6864-3A6A-9615-1F8783976B9A}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\Abilities\HeroGameplayAbility_TargetLock.h">
+      <Filter>Source\Warrior\Public\AbilitySystem\Abilities</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\Abilities\WarriorEnemyGameplayAbility.h">
       <Filter>Source\Warrior\Public\AbilitySystem\Abilities</Filter>
     </ClInclude>
@@ -273,6 +288,15 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\Abilities\WarriorHeroGameplayAbility.h">
       <Filter>Source\Warrior\Public\AbilitySystem\Abilities</Filter>
+    </ClInclude>
+    <Filter Include="Source\Warrior\Public\AbilitySystem\AbilityTask">
+      <UniqueIdentifier>{FBD8A58B-C84C-33B9-BA39-99936E97575E}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\AbilityTask\AbilityTask_ExecuteTaskOnTick.h">
+      <Filter>Source\Warrior\Public\AbilitySystem\AbilityTask</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\AbilityTask\AbilityTask_ExecuteTaskOnTrick.h">
+      <Filter>Source\Warrior\Public\AbilitySystem\AbilityTask</Filter>
     </ClInclude>
     <Filter Include="Source\Warrior\Public\AI">
       <UniqueIdentifier>{F6BE9F9D-4B34-34C7-AC30-DF8A00729C0E}</UniqueIdentifier>

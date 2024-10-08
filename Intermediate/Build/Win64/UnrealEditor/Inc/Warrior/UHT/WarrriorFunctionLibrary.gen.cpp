@@ -362,6 +362,63 @@ DEFINE_FUNCTION(UWarrriorFunctionLibrary::execIsTargetPawnHostile)
 }
 // End Class UWarrriorFunctionLibrary Function IsTargetPawnHostile
 
+// Begin Class UWarrriorFunctionLibrary Function IsValidBlock
+struct Z_Construct_UFunction_UWarrriorFunctionLibrary_IsValidBlock_Statics
+{
+	struct WarrriorFunctionLibrary_eventIsValidBlock_Parms
+	{
+		AActor* InAttacker;
+		AActor* InDefender;
+		bool ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Warrior|FunctionLibrary" },
+		{ "ModuleRelativePath", "Public/WarrriorFunctionLibrary.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_InAttacker;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_InDefender;
+	static void NewProp_ReturnValue_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UWarrriorFunctionLibrary_IsValidBlock_Statics::NewProp_InAttacker = { "InAttacker", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarrriorFunctionLibrary_eventIsValidBlock_Parms, InAttacker), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UWarrriorFunctionLibrary_IsValidBlock_Statics::NewProp_InDefender = { "InDefender", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarrriorFunctionLibrary_eventIsValidBlock_Parms, InDefender), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UWarrriorFunctionLibrary_IsValidBlock_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+{
+	((WarrriorFunctionLibrary_eventIsValidBlock_Parms*)Obj)->ReturnValue = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UWarrriorFunctionLibrary_IsValidBlock_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(WarrriorFunctionLibrary_eventIsValidBlock_Parms), &Z_Construct_UFunction_UWarrriorFunctionLibrary_IsValidBlock_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWarrriorFunctionLibrary_IsValidBlock_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarrriorFunctionLibrary_IsValidBlock_Statics::NewProp_InAttacker,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarrriorFunctionLibrary_IsValidBlock_Statics::NewProp_InDefender,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarrriorFunctionLibrary_IsValidBlock_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarrriorFunctionLibrary_IsValidBlock_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarrriorFunctionLibrary_IsValidBlock_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWarrriorFunctionLibrary, nullptr, "IsValidBlock", nullptr, nullptr, Z_Construct_UFunction_UWarrriorFunctionLibrary_IsValidBlock_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarrriorFunctionLibrary_IsValidBlock_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarrriorFunctionLibrary_IsValidBlock_Statics::WarrriorFunctionLibrary_eventIsValidBlock_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarrriorFunctionLibrary_IsValidBlock_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarrriorFunctionLibrary_IsValidBlock_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UWarrriorFunctionLibrary_IsValidBlock_Statics::WarrriorFunctionLibrary_eventIsValidBlock_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UWarrriorFunctionLibrary_IsValidBlock()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UWarrriorFunctionLibrary_IsValidBlock_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UWarrriorFunctionLibrary::execIsValidBlock)
+{
+	P_GET_OBJECT(AActor,Z_Param_InAttacker);
+	P_GET_OBJECT(AActor,Z_Param_InDefender);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=UWarrriorFunctionLibrary::IsValidBlock(Z_Param_InAttacker,Z_Param_InDefender);
+	P_NATIVE_END;
+}
+// End Class UWarrriorFunctionLibrary Function IsValidBlock
+
 // Begin Class UWarrriorFunctionLibrary Function RemoveGameplayFromActorIfFound
 struct Z_Construct_UFunction_UWarrriorFunctionLibrary_RemoveGameplayFromActorIfFound_Statics
 {
@@ -421,6 +478,7 @@ void UWarrriorFunctionLibrary::StaticRegisterNativesUWarrriorFunctionLibrary()
 		{ "ComputeHitReactDirectionTag", &UWarrriorFunctionLibrary::execComputeHitReactDirectionTag },
 		{ "GetScalableFloatValueAtLevel", &UWarrriorFunctionLibrary::execGetScalableFloatValueAtLevel },
 		{ "IsTargetPawnHostile", &UWarrriorFunctionLibrary::execIsTargetPawnHostile },
+		{ "IsValidBlock", &UWarrriorFunctionLibrary::execIsValidBlock },
 		{ "RemoveGameplayFromActorIfFound", &UWarrriorFunctionLibrary::execRemoveGameplayFromActorIfFound },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -449,6 +507,7 @@ struct Z_Construct_UClass_UWarrriorFunctionLibrary_Statics
 		{ &Z_Construct_UFunction_UWarrriorFunctionLibrary_ComputeHitReactDirectionTag, "ComputeHitReactDirectionTag" }, // 2483974346
 		{ &Z_Construct_UFunction_UWarrriorFunctionLibrary_GetScalableFloatValueAtLevel, "GetScalableFloatValueAtLevel" }, // 598474311
 		{ &Z_Construct_UFunction_UWarrriorFunctionLibrary_IsTargetPawnHostile, "IsTargetPawnHostile" }, // 1136538345
+		{ &Z_Construct_UFunction_UWarrriorFunctionLibrary_IsValidBlock, "IsValidBlock" }, // 2990509130
 		{ &Z_Construct_UFunction_UWarrriorFunctionLibrary_RemoveGameplayFromActorIfFound, "RemoveGameplayFromActorIfFound" }, // 1766364428
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -498,10 +557,10 @@ UWarrriorFunctionLibrary::~UWarrriorFunctionLibrary() {}
 struct Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_WarrriorFunctionLibrary_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWarrriorFunctionLibrary, UWarrriorFunctionLibrary::StaticClass, TEXT("UWarrriorFunctionLibrary"), &Z_Registration_Info_UClass_UWarrriorFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarrriorFunctionLibrary), 3227486660U) },
+		{ Z_Construct_UClass_UWarrriorFunctionLibrary, UWarrriorFunctionLibrary::StaticClass, TEXT("UWarrriorFunctionLibrary"), &Z_Registration_Info_UClass_UWarrriorFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarrriorFunctionLibrary), 3901468736U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_WarrriorFunctionLibrary_h_1845798162(TEXT("/Script/Warrior"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_WarrriorFunctionLibrary_h_630775575(TEXT("/Script/Warrior"),
 	Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_WarrriorFunctionLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_WarrriorFunctionLibrary_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
