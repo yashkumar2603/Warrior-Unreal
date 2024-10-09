@@ -6,6 +6,7 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "Warrior/Public/AbilitySystem/Abilities/HeroGameplayAbility_TargetLock.h"
+#include "Runtime/GameplayTags/Classes/GameplayTagContainer.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeHeroGameplayAbility_TargetLock() {}
 
@@ -16,6 +17,7 @@ COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector2D();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UEnum* Z_Construct_UEnum_Engine_EObjectTypeQuery();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputMappingContext_NoRegister();
+GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
 UPackage* Z_Construct_UPackage__Script_Warrior();
 WARRIOR_API UClass* Z_Construct_UClass_UHeroGameplayAbility_TargetLock();
 WARRIOR_API UClass* Z_Construct_UClass_UHeroGameplayAbility_TargetLock_NoRegister();
@@ -68,12 +70,58 @@ DEFINE_FUNCTION(UHeroGameplayAbility_TargetLock::execOnTargetLockTick)
 }
 // End Class UHeroGameplayAbility_TargetLock Function OnTargetLockTick
 
+// Begin Class UHeroGameplayAbility_TargetLock Function SwitchTarget
+struct Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_SwitchTarget_Statics
+{
+	struct HeroGameplayAbility_TargetLock_eventSwitchTarget_Parms
+	{
+		FGameplayTag InSwitchDirectionTag;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/AbilitySystem/Abilities/HeroGameplayAbility_TargetLock.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InSwitchDirectionTag_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_InSwitchDirectionTag;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_SwitchTarget_Statics::NewProp_InSwitchDirectionTag = { "InSwitchDirectionTag", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(HeroGameplayAbility_TargetLock_eventSwitchTarget_Parms, InSwitchDirectionTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InSwitchDirectionTag_MetaData), NewProp_InSwitchDirectionTag_MetaData) }; // 1298103297
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_SwitchTarget_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_SwitchTarget_Statics::NewProp_InSwitchDirectionTag,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_SwitchTarget_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_SwitchTarget_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UHeroGameplayAbility_TargetLock, nullptr, "SwitchTarget", nullptr, nullptr, Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_SwitchTarget_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_SwitchTarget_Statics::PropPointers), sizeof(Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_SwitchTarget_Statics::HeroGameplayAbility_TargetLock_eventSwitchTarget_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04480401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_SwitchTarget_Statics::Function_MetaDataParams), Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_SwitchTarget_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_SwitchTarget_Statics::HeroGameplayAbility_TargetLock_eventSwitchTarget_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_SwitchTarget()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_SwitchTarget_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UHeroGameplayAbility_TargetLock::execSwitchTarget)
+{
+	P_GET_STRUCT_REF(FGameplayTag,Z_Param_Out_InSwitchDirectionTag);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SwitchTarget(Z_Param_Out_InSwitchDirectionTag);
+	P_NATIVE_END;
+}
+// End Class UHeroGameplayAbility_TargetLock Function SwitchTarget
+
 // Begin Class UHeroGameplayAbility_TargetLock
 void UHeroGameplayAbility_TargetLock::StaticRegisterNativesUHeroGameplayAbility_TargetLock()
 {
 	UClass* Class = UHeroGameplayAbility_TargetLock::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "OnTargetLockTick", &UHeroGameplayAbility_TargetLock::execOnTargetLockTick },
+		{ "SwitchTarget", &UHeroGameplayAbility_TargetLock::execSwitchTarget },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -124,6 +172,10 @@ struct Z_Construct_UClass_UHeroGameplayAbility_TargetLock_Statics
 		{ "Category", "Target Lock" },
 		{ "ModuleRelativePath", "Public/AbilitySystem/Abilities/HeroGameplayAbility_TargetLock.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TargetLockCameraOffsetDistance_MetaData[] = {
+		{ "Category", "Target Lock" },
+		{ "ModuleRelativePath", "Public/AbilitySystem/Abilities/HeroGameplayAbility_TargetLock.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AvailableActorsToLock_MetaData[] = {
 		{ "ModuleRelativePath", "Public/AbilitySystem/Abilities/HeroGameplayAbility_TargetLock.h" },
 	};
@@ -151,6 +203,7 @@ struct Z_Construct_UClass_UHeroGameplayAbility_TargetLock_Statics
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_TargetLockRotationInterpSpeed;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_TargetLockMaxWalkSpeed;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_TargetLockMappingContext;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_TargetLockCameraOffsetDistance;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_AvailableActorsToLock_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_AvailableActorsToLock;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CurrentLockedActor;
@@ -161,6 +214,7 @@ struct Z_Construct_UClass_UHeroGameplayAbility_TargetLock_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_OnTargetLockTick, "OnTargetLockTick" }, // 1695636822
+		{ &Z_Construct_UFunction_UHeroGameplayAbility_TargetLock_SwitchTarget, "SwitchTarget" }, // 1250172902
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -181,6 +235,7 @@ const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UHeroGameplayAb
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UHeroGameplayAbility_TargetLock_Statics::NewProp_TargetLockRotationInterpSpeed = { "TargetLockRotationInterpSpeed", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UHeroGameplayAbility_TargetLock, TargetLockRotationInterpSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TargetLockRotationInterpSpeed_MetaData), NewProp_TargetLockRotationInterpSpeed_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UHeroGameplayAbility_TargetLock_Statics::NewProp_TargetLockMaxWalkSpeed = { "TargetLockMaxWalkSpeed", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UHeroGameplayAbility_TargetLock, TargetLockMaxWalkSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TargetLockMaxWalkSpeed_MetaData), NewProp_TargetLockMaxWalkSpeed_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UHeroGameplayAbility_TargetLock_Statics::NewProp_TargetLockMappingContext = { "TargetLockMappingContext", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UHeroGameplayAbility_TargetLock, TargetLockMappingContext), Z_Construct_UClass_UInputMappingContext_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TargetLockMappingContext_MetaData), NewProp_TargetLockMappingContext_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UHeroGameplayAbility_TargetLock_Statics::NewProp_TargetLockCameraOffsetDistance = { "TargetLockCameraOffsetDistance", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UHeroGameplayAbility_TargetLock, TargetLockCameraOffsetDistance), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TargetLockCameraOffsetDistance_MetaData), NewProp_TargetLockCameraOffsetDistance_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UHeroGameplayAbility_TargetLock_Statics::NewProp_AvailableActorsToLock_Inner = { "AvailableActorsToLock", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UHeroGameplayAbility_TargetLock_Statics::NewProp_AvailableActorsToLock = { "AvailableActorsToLock", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UHeroGameplayAbility_TargetLock, AvailableActorsToLock), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AvailableActorsToLock_MetaData), NewProp_AvailableActorsToLock_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UHeroGameplayAbility_TargetLock_Statics::NewProp_CurrentLockedActor = { "CurrentLockedActor", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UHeroGameplayAbility_TargetLock, CurrentLockedActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentLockedActor_MetaData), NewProp_CurrentLockedActor_MetaData) };
@@ -197,6 +252,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UHeroGame
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHeroGameplayAbility_TargetLock_Statics::NewProp_TargetLockRotationInterpSpeed,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHeroGameplayAbility_TargetLock_Statics::NewProp_TargetLockMaxWalkSpeed,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHeroGameplayAbility_TargetLock_Statics::NewProp_TargetLockMappingContext,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHeroGameplayAbility_TargetLock_Statics::NewProp_TargetLockCameraOffsetDistance,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHeroGameplayAbility_TargetLock_Statics::NewProp_AvailableActorsToLock_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHeroGameplayAbility_TargetLock_Statics::NewProp_AvailableActorsToLock,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHeroGameplayAbility_TargetLock_Statics::NewProp_CurrentLockedActor,
@@ -246,10 +302,10 @@ UHeroGameplayAbility_TargetLock::~UHeroGameplayAbility_TargetLock() {}
 struct Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_HeroGameplayAbility_TargetLock_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UHeroGameplayAbility_TargetLock, UHeroGameplayAbility_TargetLock::StaticClass, TEXT("UHeroGameplayAbility_TargetLock"), &Z_Registration_Info_UClass_UHeroGameplayAbility_TargetLock, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UHeroGameplayAbility_TargetLock), 2659520288U) },
+		{ Z_Construct_UClass_UHeroGameplayAbility_TargetLock, UHeroGameplayAbility_TargetLock::StaticClass, TEXT("UHeroGameplayAbility_TargetLock"), &Z_Registration_Info_UClass_UHeroGameplayAbility_TargetLock, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UHeroGameplayAbility_TargetLock), 1522462097U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_HeroGameplayAbility_TargetLock_h_2533364102(TEXT("/Script/Warrior"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_HeroGameplayAbility_TargetLock_h_2937110929(TEXT("/Script/Warrior"),
 	Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_HeroGameplayAbility_TargetLock_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_AbilitySystem_Abilities_HeroGameplayAbility_TargetLock_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
