@@ -103,6 +103,9 @@
     <Filter Include="Source\Warrior\Private\AbilitySystem\AbilityTask">
       <UniqueIdentifier>{707EA36C-7F42-32B6-9717-13D8E149B22A}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Private\AbilitySystem\AbilityTask\AbilityTask_ExecuteOnTick.cpp">
+      <Filter>Source\Warrior\Private\AbilitySystem\AbilityTask</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Warrior\Private\AbilitySystem\AbilityTask\AbilityTask_ExecuteTaskOnTick.cpp">
       <Filter>Source\Warrior\Private\AbilitySystem\AbilityTask</Filter>
     </ClCompile>
@@ -292,6 +295,9 @@
     <Filter Include="Source\Warrior\Public\AbilitySystem\AbilityTask">
       <UniqueIdentifier>{FBD8A58B-C84C-33B9-BA39-99936E97575E}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\AbilityTask\AbilityTask_ExecuteOnTick.h">
+      <Filter>Source\Warrior\Public\AbilitySystem\AbilityTask</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\AbilityTask\AbilityTask_ExecuteTaskOnTick.h">
       <Filter>Source\Warrior\Public\AbilitySystem\AbilityTask</Filter>
     </ClInclude>

@@ -297,6 +297,9 @@
     <ClCompile Include="..\..\Source\Warrior\Private\AbilitySystem\Abilities\WarriorHeroGameplayAbility.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\AbilitySystem\AbilityTask\AbilityTask_ExecuteOnTick.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Warrior\Private\AbilitySystem\AbilityTask\AbilityTask_ExecuteTaskOnTick.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -402,6 +405,7 @@
     <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\Abilities\WarriorEnemyGameplayAbility.h"/>
     <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\Abilities\WarriorGameplayAbility.h"/>
     <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\Abilities\WarriorHeroGameplayAbility.h"/>
+    <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\AbilityTask\AbilityTask_ExecuteOnTick.h"/>
     <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\AbilityTask\AbilityTask_ExecuteTaskOnTick.h"/>
     <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\AbilityTask\AbilityTask_ExecuteTaskOnTrick.h"/>
     <ClInclude Include="..\..\Source\Warrior\Public\AI\BTService_OrientToTargetActor.h"/>
