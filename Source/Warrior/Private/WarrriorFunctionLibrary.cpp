@@ -111,3 +111,11 @@ bool UWarrriorFunctionLibrary::IsValidBlock(AActor* InAttacker, AActor* InDefend
     //Debug::Print(DebugString, DotResult < -0.1f ? FColor::Green : FColor::Red);
     return DotResult < -0.75f ? true : false;
 }
+
+bool UWarrriorFunctionLibrary::ApplyGameplayEffectSpecHandleToTargetActor(AActor* InInstigator, AActor* InTargetActor, const FGameplayEffectSpecHandle& InSpecHandle)
+{
+    UWarriorAbilitySystemComponent* SourceASC = NativeGetWarriorASCFromActor(InInstigator);
+    UWarriorAbilitySystemComponent* TargetASC = NativeGetWarriorASCFromActor(InTargetActor);
+    FActiveGameplayEffectHandle ActiveGameplayEffectHandle = SourceASC->ApplyGameplayEffectSpecToTarget(*InSpecHandle.Data, TargetASC);
+    return ActiveGameplayEffectHandle.WasSuccessfullyApplied();
+}
