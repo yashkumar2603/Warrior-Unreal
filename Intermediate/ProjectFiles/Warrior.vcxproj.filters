@@ -112,6 +112,9 @@
     <ClCompile Include="..\..\Source\Warrior\Private\AbilitySystem\AbilityTask\AbilityTask_ExecuteTaskOnTrick.cpp">
       <Filter>Source\Warrior\Private\AbilitySystem\AbilityTask</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\AbilitySystem\AbilityTask\AbilityTask_WaitSpawnEnemies.cpp">
+      <Filter>Source\Warrior\Private\AbilitySystem\AbilityTask</Filter>
+    </ClCompile>
     <Filter Include="Source\Warrior\Private\AI">
       <UniqueIdentifier>{D76A10E6-74DA-3B17-B93F-B03971A2ADC2}</UniqueIdentifier>
     </Filter>
@@ -305,6 +308,9 @@
       <Filter>Source\Warrior\Public\AbilitySystem\AbilityTask</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\AbilityTask\AbilityTask_ExecuteTaskOnTrick.h">
+      <Filter>Source\Warrior\Public\AbilitySystem\AbilityTask</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\AbilityTask\AbilityTask_WaitSpawnEnemies.h">
       <Filter>Source\Warrior\Public\AbilitySystem\AbilityTask</Filter>
     </ClInclude>
     <Filter Include="Source\Warrior\Public\AI">
