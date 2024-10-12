@@ -270,6 +270,9 @@
     <None Include="..\..\Source\Warrior\.vs\VSWorkspaceState.json"/>
     <None Include="..\..\Source\Warrior\.vs\Warrior\v17\.wsuo"/>
     <None Include="..\..\Source\Warrior\.vs\Warrior\v17\DocumentLayout.json"/>
+    <ClCompile Include="..\..\Source\Warrior\Private\WarriorCountDownAction.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Warrior\Private\WarriorGameplayTags.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -402,6 +405,7 @@
     <ClCompile Include="..\..\Source\Warrior\Private\Widgets\WarriorWidgetBase.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClInclude Include="..\..\Source\Warrior\Public\WarriorCountDownAction.h"/>
     <ClInclude Include="..\..\Source\Warrior\Public\WarriorGameplayTags.h"/>
     <ClInclude Include="..\..\Source\Warrior\Public\WarrriorFunctionLibrary.h"/>
     <ClInclude Include="..\..\Source\Warrior\Public\AbilitySystem\GE_ExecCalc_DamageTaken.h"/>

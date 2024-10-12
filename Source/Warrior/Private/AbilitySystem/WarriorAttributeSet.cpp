@@ -42,6 +42,19 @@ void UWarriorAttributeSet::PostGameplayEffectExecute(const FGameplayEffectModCal
 	{
 		const float NewCurrentRage = FMath::Clamp(GetCurrentRage(), 0.f, GetMaxRage());
 		SetCurrentRage(NewCurrentRage);
+		if (GetCurrentRage() == GetMaxRage())
+		{
+			UWarrriorFunctionLibrary::AddGameplayTagToActorIfNone(Data.Target.GetAvatarActor(), WarriorGameplayTags::Player_Status_Rage_Full);
+		}
+		else if (GetCurrentRage() == 0.f)
+		{
+			UWarrriorFunctionLibrary::AddGameplayTagToActorIfNone(Data.Target.GetAvatarActor(), WarriorGameplayTags::Player_Status_Rage_None);
+		}
+		else
+		{
+			UWarrriorFunctionLibrary::RemoveGameplayFromActorIfFound(Data.Target.GetAvatarActor(), WarriorGameplayTags::Player_Status_Rage_Full);
+			UWarrriorFunctionLibrary::RemoveGameplayFromActorIfFound(Data.Target.GetAvatarActor(), WarriorGameplayTags::Player_Status_Rage_None);
+		}
 
 		if (UHeroUIComponent* HeroUIComponent = CachedPawnUIInterface->GetHeroUIComponent())
 		{

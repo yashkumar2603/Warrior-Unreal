@@ -8,14 +8,17 @@
 #include "Warrior/Public/WarrriorFunctionLibrary.h"
 #include "GameplayAbilities/Public/GameplayEffectTypes.h"
 #include "GameplayAbilities/Public/ScalableFloat.h"
+#include "Runtime/Engine/Classes/Engine/LatentActionManager.h"
 #include "Runtime/GameplayTags/Classes/GameplayTagContainer.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeWarrriorFunctionLibrary() {}
 
 // Begin Cross Module References
+COREUOBJECT_API UClass* Z_Construct_UClass_UObject_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UBlueprintFunctionLibrary();
+ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FLatentActionInfo();
 GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayEffectSpecHandle();
 GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FScalableFloat();
 GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
@@ -24,6 +27,8 @@ WARRIOR_API UClass* Z_Construct_UClass_UPawnCombatComponent_NoRegister();
 WARRIOR_API UClass* Z_Construct_UClass_UWarrriorFunctionLibrary();
 WARRIOR_API UClass* Z_Construct_UClass_UWarrriorFunctionLibrary_NoRegister();
 WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorConfirmType();
+WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorCountDownActionInput();
+WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorCountDownActionOutput();
 WARRIOR_API UEnum* Z_Construct_UEnum_Warrior_EWarriorValidType();
 // End Cross Module References
 
@@ -315,6 +320,97 @@ DEFINE_FUNCTION(UWarrriorFunctionLibrary::execComputeHitReactDirectionTag)
 }
 // End Class UWarrriorFunctionLibrary Function ComputeHitReactDirectionTag
 
+// Begin Class UWarrriorFunctionLibrary Function CountDown
+struct Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics
+{
+	struct WarrriorFunctionLibrary_eventCountDown_Parms
+	{
+		const UObject* WorldContextObject;
+		float TotalTime;
+		float UpdateInterval;
+		float OutRemainingTime;
+		EWarriorCountDownActionInput CountDownInput;
+		EWarriorCountDownActionOutput CountDownOutput;
+		FLatentActionInfo LatentInfo;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Warrior|FunctionLibrary" },
+		{ "ExpandEnumAsExecs", "CountDownInput|CountDownOutput" },
+		{ "Latent", "" },
+		{ "LatentInfo", "LatentInfo" },
+		{ "ModuleRelativePath", "Public/WarrriorFunctionLibrary.h" },
+		{ "TotalTime", "1.0" },
+		{ "UpdateInterval", "0.1" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WorldContextObject_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CountDownOutput_MetaData[] = {
+		{ "DisplayName", "Output" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_TotalTime;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_UpdateInterval;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_OutRemainingTime;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_CountDownInput_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_CountDownInput;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_CountDownOutput_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_CountDownOutput;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_LatentInfo;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarrriorFunctionLibrary_eventCountDown_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WorldContextObject_MetaData), NewProp_WorldContextObject_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::NewProp_TotalTime = { "TotalTime", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarrriorFunctionLibrary_eventCountDown_Parms, TotalTime), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::NewProp_UpdateInterval = { "UpdateInterval", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarrriorFunctionLibrary_eventCountDown_Parms, UpdateInterval), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::NewProp_OutRemainingTime = { "OutRemainingTime", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarrriorFunctionLibrary_eventCountDown_Parms, OutRemainingTime), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::NewProp_CountDownInput_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::NewProp_CountDownInput = { "CountDownInput", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarrriorFunctionLibrary_eventCountDown_Parms, CountDownInput), Z_Construct_UEnum_Warrior_EWarriorCountDownActionInput, METADATA_PARAMS(0, nullptr) }; // 3648965920
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::NewProp_CountDownOutput_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::NewProp_CountDownOutput = { "CountDownOutput", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarrriorFunctionLibrary_eventCountDown_Parms, CountDownOutput), Z_Construct_UEnum_Warrior_EWarriorCountDownActionOutput, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CountDownOutput_MetaData), NewProp_CountDownOutput_MetaData) }; // 1618345052
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::NewProp_LatentInfo = { "LatentInfo", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WarrriorFunctionLibrary_eventCountDown_Parms, LatentInfo), Z_Construct_UScriptStruct_FLatentActionInfo, METADATA_PARAMS(0, nullptr) }; // 1503398820
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::NewProp_WorldContextObject,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::NewProp_TotalTime,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::NewProp_UpdateInterval,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::NewProp_OutRemainingTime,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::NewProp_CountDownInput_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::NewProp_CountDownInput,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::NewProp_CountDownOutput_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::NewProp_CountDownOutput,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::NewProp_LatentInfo,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWarrriorFunctionLibrary, nullptr, "CountDown", nullptr, nullptr, Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::WarrriorFunctionLibrary_eventCountDown_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::WarrriorFunctionLibrary_eventCountDown_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UWarrriorFunctionLibrary::execCountDown)
+{
+	P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+	P_GET_PROPERTY(FFloatProperty,Z_Param_TotalTime);
+	P_GET_PROPERTY(FFloatProperty,Z_Param_UpdateInterval);
+	P_GET_PROPERTY_REF(FFloatProperty,Z_Param_Out_OutRemainingTime);
+	P_GET_ENUM(EWarriorCountDownActionInput,Z_Param_CountDownInput);
+	P_GET_ENUM_REF(EWarriorCountDownActionOutput,Z_Param_Out_CountDownOutput);
+	P_GET_STRUCT(FLatentActionInfo,Z_Param_LatentInfo);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	UWarrriorFunctionLibrary::CountDown(Z_Param_WorldContextObject,Z_Param_TotalTime,Z_Param_UpdateInterval,Z_Param_Out_OutRemainingTime,EWarriorCountDownActionInput(Z_Param_CountDownInput),(EWarriorCountDownActionOutput&)(Z_Param_Out_CountDownOutput),Z_Param_LatentInfo);
+	P_NATIVE_END;
+}
+// End Class UWarrriorFunctionLibrary Function CountDown
+
 // Begin Class UWarrriorFunctionLibrary Function GetScalableFloatValueAtLevel
 struct Z_Construct_UFunction_UWarrriorFunctionLibrary_GetScalableFloatValueAtLevel_Statics
 {
@@ -544,6 +640,7 @@ void UWarrriorFunctionLibrary::StaticRegisterNativesUWarrriorFunctionLibrary()
 		{ "BP_DoesActorHaveTag", &UWarrriorFunctionLibrary::execBP_DoesActorHaveTag },
 		{ "BP_GetPawnCombatComponentFromActor", &UWarrriorFunctionLibrary::execBP_GetPawnCombatComponentFromActor },
 		{ "ComputeHitReactDirectionTag", &UWarrriorFunctionLibrary::execComputeHitReactDirectionTag },
+		{ "CountDown", &UWarrriorFunctionLibrary::execCountDown },
 		{ "GetScalableFloatValueAtLevel", &UWarrriorFunctionLibrary::execGetScalableFloatValueAtLevel },
 		{ "IsTargetPawnHostile", &UWarrriorFunctionLibrary::execIsTargetPawnHostile },
 		{ "IsValidBlock", &UWarrriorFunctionLibrary::execIsValidBlock },
@@ -574,6 +671,7 @@ struct Z_Construct_UClass_UWarrriorFunctionLibrary_Statics
 		{ &Z_Construct_UFunction_UWarrriorFunctionLibrary_BP_DoesActorHaveTag, "BP_DoesActorHaveTag" }, // 929946796
 		{ &Z_Construct_UFunction_UWarrriorFunctionLibrary_BP_GetPawnCombatComponentFromActor, "BP_GetPawnCombatComponentFromActor" }, // 2300170904
 		{ &Z_Construct_UFunction_UWarrriorFunctionLibrary_ComputeHitReactDirectionTag, "ComputeHitReactDirectionTag" }, // 2483974346
+		{ &Z_Construct_UFunction_UWarrriorFunctionLibrary_CountDown, "CountDown" }, // 421290195
 		{ &Z_Construct_UFunction_UWarrriorFunctionLibrary_GetScalableFloatValueAtLevel, "GetScalableFloatValueAtLevel" }, // 598474311
 		{ &Z_Construct_UFunction_UWarrriorFunctionLibrary_IsTargetPawnHostile, "IsTargetPawnHostile" }, // 1136538345
 		{ &Z_Construct_UFunction_UWarrriorFunctionLibrary_IsValidBlock, "IsValidBlock" }, // 2990509130
@@ -626,10 +724,10 @@ UWarrriorFunctionLibrary::~UWarrriorFunctionLibrary() {}
 struct Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_WarrriorFunctionLibrary_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWarrriorFunctionLibrary, UWarrriorFunctionLibrary::StaticClass, TEXT("UWarrriorFunctionLibrary"), &Z_Registration_Info_UClass_UWarrriorFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarrriorFunctionLibrary), 3777345523U) },
+		{ Z_Construct_UClass_UWarrriorFunctionLibrary, UWarrriorFunctionLibrary::StaticClass, TEXT("UWarrriorFunctionLibrary"), &Z_Registration_Info_UClass_UWarrriorFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWarrriorFunctionLibrary), 4121523244U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_WarrriorFunctionLibrary_h_3734273374(TEXT("/Script/Warrior"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_WarrriorFunctionLibrary_h_2763433722(TEXT("/Script/Warrior"),
 	Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_WarrriorFunctionLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_Warrior_Source_Warrior_Public_WarrriorFunctionLibrary_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
